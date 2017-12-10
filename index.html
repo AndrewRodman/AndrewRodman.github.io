@@ -3,6 +3,39 @@
 	<head>
 
 	<title>Andrew Rodman | Computer Science Student</title>
+	
+	<script language="javascript">
+	var i = 0;
+	var txt = '.. Computer Science Student|'; /* The text */
+	var speed = 100; /* The speed/duration of the effect in milliseconds */
+	var firstloop=false;
+	var secondloop=false;
+	
+	function typeWriter() {
+		if(i>=txt.length&&firstloop==false)
+		{
+			document.getElementById("demo").innerHTML=document.getElementById("demo").innerHTML.slice(0,-2);
+			i--;
+			
+			if(document.getElementById("demo").innerHTML.length<50)
+			{
+				alert("herr");
+				firstloop=true;
+				i=0;
+				txt = 'Graduate|';
+			}
+		}
+		if (i < txt.length) {	
+
+			document.getElementById("demo").innerHTML += txt.charAt(i);
+			i++;
+			setTimeout(typeWriter, speed);
+			
+		}	
+		
+	}
+	
+	</script>
 	</head>
 	<style>
 	.header {
@@ -15,6 +48,7 @@
 		background-image: url("background.jpg");
 		background-position: center;
 		background-attachment: fixed;
+		
 	}
 	
 	/* Style the top navigation bar */
@@ -40,10 +74,17 @@
 		color: black;
 	}
 
-	p{
-		text-indent: 250px;
+	.textmove{
+		text-indent: 450px;
 		font-size: 150%;
 	}
+	.resize{
+		width: 32px;
+		height: 32px;
+	}
+	
+
+
 	
 	</style>
 	
@@ -53,14 +94,21 @@
 		<a href="https://github.com/AndrewRodman">
 			<img src ="images/GitHub-Mark-32px.png">
 		</a>
-		<a href="resume.html">Resume
+		<a href="resume.pdf">
+			<img src ="images/resume.png" class="resize">
 		</a>
-		<p align="left", style = "font-family:verdana">Andrew <b>Rodman</b></p>
+		
+			<p  id="demo",align="left", style = "font-family:verdana", class="textmove">Andrew <b>Rodman</b>	
+			
+			</p>
+		
 
 	</div>
-	
-	
-	
+
+	<script>
+	typeWriter();	
+	</script>
+
 
 
 	</body>
