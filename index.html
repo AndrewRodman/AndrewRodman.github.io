@@ -2,46 +2,53 @@
 <html>
 	<head>
 
-	<title>Andrew Rodman | Computer Science Student</title>
+	<title>Andrew Rodman | Inspiring Software Engineer|</title>
 	
 	<script language="javascript">
-	var i = 0;
-	var txt = '.. Computer Science Student|'; /* The text */
-	var speed = 100; /* The speed/duration of the effect in milliseconds */
-	var firstloop=false;
-	var secondloop=false;
-	
-	function typeWriter() {
-		if(i>=txt.length&&firstloop==false)
-		{
-			document.getElementById("demo").innerHTML=document.getElementById("demo").innerHTML.slice(0,-2);
-			i--;
-			
-			if(document.getElementById("demo").innerHTML.length<50)
-			{
-				alert("herr");
-				firstloop=true;
-				i=0;
-				txt = 'Graduate|';
-			}
-		}
-		if (i < txt.length) {	
-
-			document.getElementById("demo").innerHTML += txt.charAt(i);
-			i++;
-			setTimeout(typeWriter, speed);
-			
-		}	
+		var i = 0;
+		var txt = ' ... Computer Science Student...|'; /* The text */
+		var speed = 120; /* The speed/duration of the effect in milliseconds */
+		var firstloop=false;
+		var secondloop=false;
 		
-	}
-	
+		function typeWriter() {
+			if(i>=txt.length&&firstloop==false)
+			{
+				
+				document.getElementById("demo").innerHTML=document.getElementById("demo").innerHTML.slice(0,-2);
+				i--;
+				
+				if(document.getElementById("demo").innerHTML.length<52)
+				{
+					firstloop=true;
+					i=0;
+					txt = 'Graduate...|';
+				}
+			}
+			if(i>=txt.length&&secondloop==false)
+			{
+				document.getElementById("demo").innerHTML=document.getElementById("demo").innerHTML.slice(0,-2);
+				i--;
+				if(document.getElementById("demo").innerHTML.length<35)
+				{
+					secondloop=true;
+					i=0;
+					txt = 'Inspiring Software Engineer|';
+				}
+			}
+			if (i < txt.length) {	
+				document.getElementById("demo").innerHTML += txt.charAt(i);
+				i++;
+				setTimeout(typeWriter, speed);			
+			}			
+		}		
 	</script>
 	</head>
 	<style>
 	.header {
     background-color: #F1F1F1;
     text-align: center;
-    padding: 1px;
+    padding: 0px;
 	}
 	
 	body {
@@ -78,21 +85,18 @@
 		text-indent: 450px;
 		font-size: 150%;
 	}
+	
 	.resize{
 		width: 32px;
 		height: 32px;
-	}
-	
-
-
+	}	
 	
 	</style>
-	
 	<body>
 
 	<div class="topnav">
 		<a href="https://github.com/AndrewRodman">
-			<img src ="images/GitHub-Mark-32px.png">
+			<img src ="images/GitHub-Mark-32px.png"class="resize">
 		</a>
 		<a href="resume.pdf">
 			<img src ="images/resume.png" class="resize">
