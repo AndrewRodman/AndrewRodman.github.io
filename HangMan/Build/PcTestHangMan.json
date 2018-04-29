@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "PcTestHangMan.data.unityweb",
+"asmCodeUrl": "PcTestHangMan.asm.code.unityweb",
+"asmMemoryUrl": "PcTestHangMan.asm.memory.unityweb",
+"asmFrameworkUrl": "PcTestHangMan.asm.framework.unityweb",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#222C36"
+}
